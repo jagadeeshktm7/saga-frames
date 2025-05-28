@@ -30,7 +30,8 @@
       <input type="text" id="name" required />
 
       <label for="email">Your Email:</label>
-      <input type="email" id="email" required />
+      <input type="email" id="email" placeholder="(optional)" />
+
 
       <label for="frame">Select Frame:</label>
       <select id="frame">
@@ -59,23 +60,28 @@
   </main>
 
   <script>
-    document.getElementById("orderForm").addEventListener("submit", function(e) {
+    document.getElementById("orderForm").addEventListener("submit", function (e) {
       e.preventDefault();
+  
       const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
       const frame = document.getElementById("frame").value;
       const quantity = document.getElementById("quantity").value;
       const payment = document.getElementById("payment").value;
-
-      document.getElementById("confirmation").innerHTML = `
+      const email = document.getElementById("email").value.trim();
+  
+      const message = `
         <h3>Thank you, ${name}!</h3>
         <p>We’ve received your order of <strong>${quantity} ${frame}</strong>.</p>
         <p>Payment Method: <strong>${payment}</strong></p>
-        <p>We’ll contact you at: <strong>${email}</strong></p>
-        <p>For urgent queries, call us at <a href="tel:+916382891466">6382891466</a>.</p>
+        <p>We will contact you to confirm your order. ${
+          email ? 'We may email you at: <strong>' + email + '</strong>' : '📱 Message me directly.'
+        }</p>
+        <p>📞 Call or WhatsApp: <a href="tel:+916382891466">6382891466</a></p>
       `;
+  
+      document.getElementById("confirmation").innerHTML = message;
       this.reset();
     });
-  </script>
+  </script>  
 </body>
 </html>
