@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Saga Frames - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="top-left">📞 6382891466</div>
+    <h1 class="logo">Saga Frames</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="contact.html">Contact & Order</a>
+  </nav>
+
+  <div class="filters">
+    <label for="priceFilter">Sort by Price:</label>
+    <select id="priceFilter">
+      <option value="default">Default</option>
+      <option value="low-high">Low to High</option>
+      <option value="high-low">High to Low</option>
+    </select>
+
+    <label for="sizeFilter">Filter by Size:</label>
+    <select id="sizeFilter">
+      <option value="all">All</option>
+      <option value="small">Small</option>
+      <option value="medium">Medium</option>
+      <option value="large">Large</option>
+    </select>
+  </div>
+
+  <main id="productList"></main>
+
+  <script src="script.js"></script>
+</body>
+</html>

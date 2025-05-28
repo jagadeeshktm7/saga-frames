@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Saga Frames - Contact & Order</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="top-left">📞 6382891466</div>
+    <h1 class="logo">Saga Frames - Contact & Order</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="contact.html">Contact & Order</a>
+  </nav>
+
+  <div class="contact-info">
+    <p><strong>Phone:</strong> <a href="tel:+916382891466">6382891466</a></p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/916382891466" target="_blank">Message Us</a></p>
+    <p>📸 <strong>Instagram:</strong> <a href="https://www.instagram.com/sagaframes?igsh=MWNyczY2dmR4bmwxMQ==" target="_blank">@sagaframes</a></p>
+  </div>
+
+  <main class="contact-form">
+    <form id="orderForm">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" required />
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" required />
+
+      <label for="frame">Select Frame:</label>
+      <select id="frame">
+        <option value="Elegant Frame">Elegant Frame</option>
+        <option value="Classic Frame">Classic Frame</option>
+        <option value="Luxury Frame">Luxury Frame</option>
+      </select>
+
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" min="1" value="1" required />
+
+      <label for="payment">Payment Method:</label>
+      <select id="payment">
+        <option value="cod">Cash on Delivery</option>
+        <option value="upi">UPI (we'll contact you)</option>
+        <option value="bank">Bank Transfer</option>
+      </select>
+
+      <label for="message">Any Notes:</label>
+      <textarea id="message" rows="4"></textarea>
+
+      <button type="submit">Place Order</button>
+    </form>
+
+    <div id="confirmation" style="margin-top:20px;"></div>
+  </main>
+
+  <script>
+    document.getElementById("orderForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const frame = document.getElementById("frame").value;
+      const quantity = document.getElementById("quantity").value;
+      const payment = document.getElementById("payment").value;
+
+      document.getElementById("confirmation").innerHTML = `
+        <h3>Thank you, ${name}!</h3>
+        <p>We’ve received your order of <strong>${quantity} ${frame}</strong>.</p>
+        <p>Payment Method: <strong>${payment}</strong></p>
+        <p>We’ll contact you at: <strong>${email}</strong></p>
+        <p>For urgent queries, call us at <a href="tel:+916382891466">6382891466</a>.</p>
+      `;
+      this.reset();
+    });
+  </script>
+</body>
+</html>

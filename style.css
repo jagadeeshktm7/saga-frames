@@ -1,0 +1,121 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  position: relative;
+  min-height: 100vh;
+  background: #f9f9f9;
+}
+
+.top-left {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+nav {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.filters {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#productList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 220px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px #ccc;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 1px 4px 15px #aaa;
+}
+
+.product-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.contact-info p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.contact-form {
+  max-width: 400px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 8px #ccc;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+}
+
+.contact-form button {
+  margin-top: 15px;
+  padding: 10px;
+  width: 100%;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #005fa3;
+}
