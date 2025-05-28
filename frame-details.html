@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Frame Details - Saga Frames</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top-left phone number -->
+  <div class="top-left">📞 6382891466</div>
+
+  <!-- Site logo -->
+  <h1 class="logo">Saga Frames</h1>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">🏠 Home</a> |
+    <a href="contact.html">📦 Order</a>
+  </nav>
+
+  <!-- Frame Detail Section -->
+  <div id="frameDetail" class="contact-form"></div>
+
+  <script>
+    const frames = {
+      frame1: {
+        name: "Elegant Frame",
+        image: "images/frame1.jpg",
+        size: "18x12 inches",
+        price: "₹300",
+        description: "A sleek, elegant wooden frame perfect for modern homes."
+      },
+      frame2: {
+        name: "Classic Frame",
+        image: "images/frame2.jpg",
+        size: "24x18 inches",
+        price: "₹450",
+        description: "Classic finish with golden lining for traditional looks."
+      },
+      frame3: {
+        name: "Luxury Frame",
+        image: "images/frame3.jpg",
+        size: "36x24 inches",
+        price: "₹600",
+        description: "Premium carved frame for art and photography lovers."
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+    const frame = frames[id];
+
+    if (frame) {
+      document.getElementById("frameDetail").innerHTML = `
+        <h2>${frame.name}</h2>
+        <img src="${frame.image}" style="max-width:100%; height:auto;" />
+        <p><strong>Size:</strong> ${frame.size}</p>
+        <p><strong>Price:</strong> ${frame.price}</p>
+        <p><strong>Description:</strong> ${frame.description}</p>
+        <a href="contact.html">Order Now</a>
+      `;
+    } else {
+      document.getElementById("frameDetail").innerHTML = "<p>Frame not found.</p>";
+    }
+  </script>
+</body>
+</html>
