@@ -8,13 +8,18 @@ body {
 
 .top-left {
   position: fixed;
-  left: 20px;
-  top: 20px;
+  left: 10px;
+  top: 10px;
   font-size: 16px;
   color: #333;
   font-weight: bold;
   z-index: 1000;
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 6px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
+
 
 .logo {
   font-family: 'Dancing Script', cursive;
@@ -118,4 +123,17 @@ nav a:hover {
 
 .contact-form button:hover {
   background: #005fa3;
+}
+.product {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
 }
